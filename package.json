@@ -18,5 +18,9 @@
   "homepage": "https://github.com/victor-arcuri/ijunior-semana3#readme",
   "devDependencies": {
     "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "csv-parser": "^3.2.0",
+    "csv-writer": "^1.6.0"
   }
 }
