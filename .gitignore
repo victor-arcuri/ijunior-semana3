@@ -144,3 +144,6 @@ vite.config.ts.timestamp-*
 
 # Git
 .gitignore
+
+# DB
+.db/*
