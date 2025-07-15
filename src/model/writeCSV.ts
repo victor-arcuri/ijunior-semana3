@@ -1,12 +1,14 @@
 import { createObjectCsvWriter as createCsvWriter } from "csv-writer";
 import { Data } from "./interfaceData";
 
-const writeCSV = async (filePath: string, data: Data[]): Promise<void> => {
+export const writeCSV = async (filePath: string, data: Data[]): Promise<void> => {
     const csvWriter = createCsvWriter({
         path: filePath,
         header: [
-            {   id: 'title', title: 'TÍTULO'    },
-            {   id: 'value', title: 'VALOR'     },
+            {   id: 'nome', title: 'Nome'       },
+            {   id: 'valor', title: 'Valor'     },
+            {   id: 'peso', title: 'Peso'     },
+            {   id: 'quantidade', title: 'Quantidade'     },
         ],
     });
     return csvWriter.writeRecords(data);
