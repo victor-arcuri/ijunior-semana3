@@ -1,2 +1,1 @@
-# ijunior-semana3
-Atividade da Semana 3: criação de ferramenta de estoque
+# Semana 3: Ferramente de gestão de estoque
