@@ -10,4 +10,5 @@ npm install
 ```
 
 ## Execução 🚀
-```npx ts-node src/index.ts```
+```npx ts-node src/index.ts
+```
