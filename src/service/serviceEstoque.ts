@@ -23,7 +23,7 @@ class EstoqueService {
     }
 
     static async pegar_produto_por_id(id: number): Promise<Data> {
-        const produtos = await this.listar_produtos();
+        const produtos = (await this.listar_produtos()).filter(produto => produto.deletado === 0);
         const produto = produtos.find((element) => element.id === id);
         if (produto === undefined){
             throw new Error('Nenhum produto com o id especificado!');
