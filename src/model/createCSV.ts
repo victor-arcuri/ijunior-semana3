@@ -2,13 +2,13 @@ import fs from 'fs';
 import { Data } from './interfaceData';
 
 export class CreateCSV{
-    static checkCSV(filePath: string): Promise<boolean>{
+    static checkCSV(filePath: string): Promise<void>{
         return new Promise((resolve, reject) => {
             fs.access(filePath, fs.constants.F_OK, (err) => {
                 if (err) {
-                    resolve(true);
+                    reject();
                 } else {
-                    reject(false);
+                    resolve();
                 }
             });
         });

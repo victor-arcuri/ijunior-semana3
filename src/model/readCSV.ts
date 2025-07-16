@@ -15,7 +15,14 @@ export const readCSV = async (filePath: string): Promise<Data[]> => {
     return new Promise((resolve, reject) => {
         fs.createReadStream(filePath)
             .pipe(csv())
-            .on('data', (data: Data) => results.push(data))
+            .on('data', (data: Data) => results.push({
+                id: Number(data.id),
+                nome: data.nome,
+                valor: Number(data.valor),
+                peso: Number(data.peso),
+                quantidade: Number(data.quantidade),
+                deletado: Number(data.deletado)
+            }))
             .on('end', () => resolve(results))
             .on('error', (error) => reject(error));
     });
