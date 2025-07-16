@@ -6,3 +6,5 @@ import EstoqueService from "./service/serviceEstoque";
 //EstoqueService.listar_produtos().then((produtos)=> console.log(produtos));
 //EstoqueService.pegar_produto_por_id(4).then(produto=>console.log(produto));
 //EstoqueService.deletar_produto_por_id(5);
+
+EstoqueController.listarProdutos();

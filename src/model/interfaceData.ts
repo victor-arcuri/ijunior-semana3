@@ -13,3 +13,11 @@ export interface DataCreate {
     peso: number;
     quantidade: number;
 };
+
+export interface DataView {
+    id: number,
+    nome: string;
+    valor: number;
+    peso: number;
+    quantidade: number;
+};
